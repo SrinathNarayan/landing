@@ -29,6 +29,7 @@ import { ReporttosuppilierComponent } from './component/desk/vendor-desk-items/r
 import { ReporttoadminComponent } from './component/desk/ware-desk-items/reporttoadmin/reporttoadmin.component';
 import { ShopgoodsComponent } from './component/desk/ware-desk-items/shopgoods/shopgoods.component';
 import { WargoodsComponent } from './component/desk/ware-desk-items/wargoods/wargoods.component';
+
 import { HomeComponent } from './component/home/home.component';
 import { AdminComponent } from './component/login/admin/admin.component';
 import { SellerComponent } from './component/login/seller/seller.component';
@@ -73,7 +74,7 @@ const routes: Routes = [
   {path: 'mshop',component:ShopgoodsComponent},
   {path: 'mreport',component:ReporttoadminComponent},
   
-
+  
   {path: '**',component:PagenotfoundComponent},
   
 ];

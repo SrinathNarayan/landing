@@ -28,55 +28,52 @@
                             <div class="card-3d-wrapper">
                                 <div class="card-front">
                                     <div class="center-wrap">
-
+                                        <form [formGroup]="loginForm" (ngSubmit)="onSubmits()">
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">VENDOR</h4>
-                                            <form action="sellerdesk.component">
+                                            
                                                 <div class="form-group">
                                                     <input type="text" name="logemail" class="form-style"
-                                                        placeholder="Your Name" id="logemail" autocomplete="none"
-                                                        pattern="[a-zA-Z]+" title="Only Alphabets are allowed"
-                                                        required />
+                                                        placeholder="Your Name" id="logemail"   formControlName="username" />
                                                     <i class="input-icon uil uil-at"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="logpass" class="form-style"
-                                                        placeholder="Your Password" id="logpass" autocomplete="none"
-                                                        pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
-                                                        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                                                        required />
+                                                        placeholder="Your Password" id="logpass"   formControlName="password"/>
                                                     <i class="input-icon uil uil-lock-alt"></i>
                                                 </div>
 
-                                                <input type="submit" routerLink="/sellerdesk" class="btn mt-4"
+                                                <input type="submit" class="btn mt-4"
                                                     value="Login" />
                                             
                                             <p class="mb-0 mt-4 text-center">
                                                 <a href="#0" class="link">Forgot your password?</a>
                                             </p>
-                                        </form>
+                                        
                                         </div>
-
+                                    </form>
                                     </div>
                                 </div>
                                 <div class="card-back">
                                     <div class="center-wrap">
+                                        <form [formGroup]="SUPloginForm" (ngSubmit)="onSubmitss()">
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">SUPPILER</h4>
 
                                             <div class="form-group mt-2">
                                                 <input type="email" name="logemail" class="form-style"
-                                                    placeholder="Your Email" id="logemail" autocomplete="none">
+                                                    placeholder="Your Email" id="logemail"   formControlName="usernames">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="password" name="logpass" class="form-style"
-                                                    placeholder="Your Password" id="logpass" autocomplete="none">
+                                                    placeholder="Your Password" id="logpass"   formControlName="passwords">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <input type="submit" routerLink="/vendordesk" class="btn mt-4"
+                                            <input type="submit"  class="btn mt-4"
                                                 value="Login">
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

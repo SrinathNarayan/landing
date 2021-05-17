@@ -24,32 +24,34 @@
                             <div class="card-3d-wrapper">
                                 <div class="card-front">
                                     <div class="center-wrap">
+                                        <form [formGroup]="manloginForm" (ngSubmit)="onSubmit()">
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">CHECKER</h4>
                                             <div class="form-group">
-                                                <input type="email" name="logemail" 
+                                                <input type="text" name="logemail" 
                                                 class="form-style" 
-                                                placeholder="Your Email" 
-                                                id="logemail" 
-                                                autocomplete="none">
+                                                placeholder="Your Name"   formControlName="usernames"
+                                            >
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>  
                                             <div class="form-group mt-2">
                                                 <input type="password" name="logpass" 
                                                 class="form-style" 
                                                 placeholder="Your Password" 
-                                                id="logpass" autocomplete="none">
+                                                formControlName="passwords">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <input type="submit" routerLink="/checkerdesk"  class="btn mt-4"value="Login">
+                                            <input type="submit"   class="btn mt-4"value="Login">
                                             <p class="mb-0 mt-4 text-center">
                                                 <a href="#0" class="link">Forgot your password?</a>
                                             </p>
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
                                 <div class="card-back">
                                     <div class="center-wrap">
+                                        <form [formGroup]="loginForm" (ngSubmit)="onSubmits()">
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">MAKER</h4>
                                             
@@ -57,7 +59,7 @@
                                                 <input type="email" name="logemail" 
                                                 class="form-style" 
                                                 placeholder="Your Email" 
-                                                id="logemail" autocomplete="none">
+                                                id="logemail"   formControlName="username">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>  
                                             <div class="form-group mt-2">
@@ -65,11 +67,12 @@
                                                 class="form-style" 
                                                 placeholder="Your Password" 
                                                 id="logpass" 
-                                                autocomplete="none">
+                                                formControlName="password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <input type="submit" routerLink="/warehousedesk"  class="btn mt-4"value="Login">
+                                            <input type="submit"   class="btn mt-4"value="Login">
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

@@ -26,26 +26,24 @@
             <div class="container">
                 <div class="form">
                     <h2>ADMIN LOGIN FORM</h2>
-                    <form action="/admindesk">
+                   
                         <div class="form-group">
-                        
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                             <div class="inputBox">
                           
                                 <input type="text" formControlName="firstName" placeholder="User Name"
-                                    class="form-control" autocomplete="none" pattern="[a-zA-Z]+" required />
+                                    class="form-control"    formControlName="username"  />
                             </div>
                             <div class="inputBox">
-                                <input type="password" placeholder="Password" formControlName="pwd" class="form-control"
-                                    autocomplete="off" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
-                                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                                    required />
+                                <input type="password" placeholder="Password" formControlName="pwd" class="form-control" formControlName="password"
+                                    />
                             </div>                     
                             <div class="inputBox">
-                                 <input type="submit" routerLink="/admindesk" value="Login">
+                                 <input type="submit" value="Login">
                             </div>
-                        
+                        </form>
                         </div>
-                    </form>
+                   
                 </div>
             </div>
         </div>

@@ -40,6 +40,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +80,7 @@ import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.com
     ShopgoodsComponent,
     WargoodsComponent,
     PagenotfoundComponent,
+    
   
 
     
